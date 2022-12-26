@@ -54,8 +54,10 @@ namespace Eargasm.Data
         private void SeedPlaylists(ModelBuilder builder)
         {
             builder.Entity<Playlist>().HasData(
-                new Playlist() { Id = 687654, Created = DateTime.Now, Url = "This is playlist 1", Title = "plalylist no 1" }
-            );
+            new Playlist() { Id = 687654, Created = DateTime.Now, Url = "This is playlist 1", Title = "plalylist no 1", UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4" },
+            new Playlist() { Id = 2, Created = DateTime.Now, Url = "This is playlist 2", Title = "plalylist no 2", UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4" }
+
+        );
         }
     }
 }

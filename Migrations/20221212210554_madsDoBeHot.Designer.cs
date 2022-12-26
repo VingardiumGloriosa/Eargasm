@@ -3,6 +3,7 @@ using System;
 using Eargasm.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eargasm.Migrations
 {
     [DbContext(typeof(EargasmContext))]
-    partial class EargasmContextModelSnapshot : ModelSnapshot
+    [Migration("20221212210554_madsDoBeHot")]
+    partial class madsDoBeHot
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -35,7 +38,6 @@ namespace Eargasm.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("UserId")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
@@ -48,17 +50,9 @@ namespace Eargasm.Migrations
                         new
                         {
                             Id = 687654,
-                            Created = new DateTime(2022, 12, 15, 13, 11, 42, 288, DateTimeKind.Local).AddTicks(4048),
+                            Created = new DateTime(2022, 12, 12, 22, 5, 54, 793, DateTimeKind.Local).AddTicks(868),
                             Title = "plalylist no 1",
                             Url = "This is playlist 1",
-                            UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Created = new DateTime(2022, 12, 15, 13, 11, 42, 288, DateTimeKind.Local).AddTicks(4114),
-                            Title = "plalylist no 2",
-                            Url = "This is playlist 2",
                             UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4"
                         });
                 });
@@ -180,13 +174,13 @@ namespace Eargasm.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "e11c3417-6a4f-46de-882f-d96a25177765",
+                            ConcurrencyStamp = "0028514a-76ee-493a-901f-6319a2196934",
                             Email = "chrk@kea.dk",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEAA3irX6JRv9gEIR0zpRjh/V7p8ILHTuSrTMp1Nkv3s8p0NSLDo+e2U/7j7BsjVXzA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAsC8mReTlD5MSKCqkNYJaX2iD3Y5O1NebjpdCqIqtgENwGvVUzOnfXEAIz4hyEtWQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "69310e84-6699-487c-a4c1-25a63d7f737c",
+                            SecurityStamp = "4d528af9-5add-482f-b8f0-c2a63b0e3a9b",
                             TwoFactorEnabled = false,
                             UserName = "chrk@kea.dk"
                         },
@@ -194,13 +188,13 @@ namespace Eargasm.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8eac1bf2-082d-4009-92d9-5948f271d813",
+                            ConcurrencyStamp = "5a9407a3-f0a8-40a4-a162-7db489472434",
                             Email = "test@kea.dk",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEHLRrYwact+JldOR8O9t4WbgPsK97CoC4VsKp/zPX84sjN3/WtOPr/Oh021FI0aM5A==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEO7cPbTUQJVsCEQk79/lIf2+qe1qVSK3CQ2M03QoOGyqKmdf0Z3GpKrcrjhXXC8pPw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "cde95d24-23fa-460d-af2b-100dbef6c6c6",
+                            SecurityStamp = "e310a89b-b4f8-4e41-ab35-428602e7b1d6",
                             TwoFactorEnabled = false,
                             UserName = "test@kea.dk"
                         });
@@ -289,9 +283,7 @@ namespace Eargasm.Migrations
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
                         .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });

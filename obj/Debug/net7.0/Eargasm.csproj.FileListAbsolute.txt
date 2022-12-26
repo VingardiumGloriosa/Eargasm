@@ -305,3 +305,5 @@ C:\Users\Glória\Code\GitHub\Sem 4\CryingMaterial\Eargasm\obj\Debug\net7.0\Earga
 C:\Users\Glória\Code\GitHub\Sem 4\CryingMaterial\Eargasm\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\Glória\Code\GitHub\Sem 4\CryingMaterial\Eargasm\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\Glória\Code\GitHub\Sem 4\CryingMaterial\Eargasm\obj\Debug\net7.0\Eargasm.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Glória\Code\GitHub\Sem 4\CryingMaterial\Eargasm\bin\Debug\net7.0\AspNet.Security.OAuth.Spotify.dll
+C:\Users\Glória\Code\GitHub\Sem 4\CryingMaterial\Eargasm\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.Google.dll

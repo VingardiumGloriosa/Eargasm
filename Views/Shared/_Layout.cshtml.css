@@ -7,6 +7,16 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.centerContent{
+  text-align: center;
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  width: 60%;
+  height: 70%;
+  margin: -50px 0 0 -50px;
+}
+
 a {
   color: #0077cc;
 }
@@ -43,6 +53,12 @@ button.accept-policy {
   position: absolute;
   bottom: 0;
   width: 100%;
+  justify-items: center;
   white-space: nowrap;
   line-height: 60px;
+  display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-content: center;
+    align-items: center;
 }

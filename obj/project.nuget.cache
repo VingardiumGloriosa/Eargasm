@@ -1,15 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "yzdPY6Fz8quunA1PPRQDFMz7xllNn1L5MnVaC1+jkzeognHXPbCUBCOlG29qyNtidv95p8Jumzel28r1yOYvgw==",
+  "dgSpecHash": "OP6umyCIi7XGhkh6O3QxLYJJbj8MNcygi2PuQg6cllC8zUBOQ/RnwxVSoT08ChqHg25Hvq2uerlvfpooCHkZAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Glória\\Code\\GitHub\\Sem 4\\CryingMaterial\\Eargasm\\Eargasm.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Glória\\.nuget\\packages\\aspnet.security.oauth.spotify\\7.0.0\\aspnet.security.oauth.spotify.7.0.0.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\Glória\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\7.0.1\\microsoft.aspnetcore.authentication.google.7.0.1.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.0\\microsoft.aspnetcore.cryptography.internal.7.0.0.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\7.0.0\\microsoft.aspnetcore.cryptography.keyderivation.7.0.0.nupkg.sha512",
     "C:\\Users\\Glória\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\7.0.0\\microsoft.aspnetcore.identity.entityframeworkcore.7.0.0.nupkg.sha512",

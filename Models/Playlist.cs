@@ -18,8 +18,8 @@ public class Playlist
 
     [DataType(DataType.Date)]
     public DateTime Created { get; set; }
-    /*public string UserId { get; set; }
-    public IdentityUser? User { get; set; }*/
+    public string UserId { get; set; }
+    public IdentityUser User { get; set; }
 
 }
 

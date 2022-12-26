@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5zywLkhF+q38tcFzLeTw5Os/RkTyUM0VT7rvFJeO9jo=",
+  "Hash": "fZQnoqKLE5Dgu6H8Ke0ucNl8O5UNT3hH3fdVO4py28k=",
   "Source": "Eargasm",
   "BasePath": "_content/Eargasm",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Glória\\Code\\GitHub\\Sem 4\\CryingMaterial\\Eargasm\\wwwroot\\Eargasm.svg",
+      "SourceId": "Eargasm",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Glória\\Code\\GitHub\\Sem 4\\CryingMaterial\\Eargasm\\wwwroot\\",
+      "BasePath": "_content/Eargasm",
+      "RelativePath": "Eargasm.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Eargasm.svg"
     },
     {
       "Identity": "C:\\Users\\Glória\\Code\\GitHub\\Sem 4\\CryingMaterial\\Eargasm\\wwwroot\\favicon.ico",

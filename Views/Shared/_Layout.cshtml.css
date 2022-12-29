@@ -21,6 +21,10 @@ a {
   color: #0077cc;
 }
 
+.pb-3{
+  overflow: none  ;
+padding:-10%}
+
 .btn-primary {
   color: #fff;
   background-color: #1b6ec2;
@@ -50,8 +54,12 @@ button.accept-policy {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
+  margin-top: 5%;
+  background-color: lightgray;
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
   width: 100%;
   justify-items: center;
   white-space: nowrap;
@@ -61,4 +69,5 @@ button.accept-policy {
     flex-direction: row-reverse;
     align-content: center;
     align-items: center;
+    padding: 10px;
 }

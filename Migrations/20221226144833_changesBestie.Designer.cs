@@ -3,6 +3,7 @@ using System;
 using Eargasm.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Eargasm.Migrations
 {
     [DbContext(typeof(EargasmContext))]
-    partial class EargasmContextModelSnapshot : ModelSnapshot
+    [Migration("20221226144833_changesBestie")]
+    partial class changesBestie
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
@@ -51,20 +54,18 @@ namespace Eargasm.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2022, 12, 26, 16, 10, 13, 259, DateTimeKind.Local).AddTicks(5400),
+                            Created = new DateTime(2022, 12, 26, 15, 48, 33, 572, DateTimeKind.Local).AddTicks(3407),
                             Title = "Feeling Cozy",
                             Url = "https://open.spotify.com/playlist/1t7Mlal8U3EkGA1KjVtWPg?si=0350ceb077104333x",
-                            UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4",
-                            imageUrl = "https://i.scdn.co/image/ab67706c0000bebb9e0a4f504a0c39f5452371df"
+                            UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4"
                         },
                         new
                         {
-                            Id = 3,
-                            Created = new DateTime(2022, 12, 26, 16, 10, 13, 259, DateTimeKind.Local).AddTicks(5481),
-                            Title = "Heavy Leg Day",
-                            Url = "https://open.spotify.com/playlist/0az16dieCF3dhJZmsCCUSb?si=bc1d022017e54189",
-                            UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4",
-                            imageUrl = "https://mosaic.scdn.co/640/ab67616d0000b273b96b08f972a3f1e925a69fedab67616d0000b273bbdafec608fc5329ec2ad831ab67616d0000b273cd8176d1d53fb8c345375866ab67616d0000b273d2de49f423eb924c79a155d2"
+                            Id = 2,
+                            Created = new DateTime(2022, 12, 26, 15, 48, 33, 572, DateTimeKind.Local).AddTicks(3475),
+                            Title = "Random Bangers",
+                            Url = "https://open.spotify.com/playlist/5B7ufrrkY8vfaFIjCQSGDy?si=1094cf73fb954010",
+                            UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4"
                         });
                 });
 
@@ -185,13 +186,13 @@ namespace Eargasm.Migrations
                         {
                             Id = "1",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "d027d01f-4466-4c9c-b21a-9022e16db6f8",
+                            ConcurrencyStamp = "7114bfb4-d8e1-4c50-add6-fdfd18ac18bd",
                             Email = "chrk@kea.dk",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAEIz3W3wVkgkPnNbiM7FlrEnhiwcO4CvgnTtln3mlMKaCzZu2j7g7hesY8IOTsy8Ixw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEC4Z4j5jKxYh8JQ8mzNdvE1NHYxcAinCLDkUQnPKDNChLV3f1GcT0RqTe7vOVI7jMg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e5fa61e0-c7e8-4db5-a97a-89dab7e7506f",
+                            SecurityStamp = "732729fe-249c-4dc5-8ec0-cd693275f05b",
                             TwoFactorEnabled = false,
                             UserName = "chrk@kea.dk"
                         },
@@ -199,13 +200,13 @@ namespace Eargasm.Migrations
                         {
                             Id = "2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "f0764f4e-b43d-47af-b155-83bf7b3af04e",
+                            ConcurrencyStamp = "b065559a-2fd4-4a66-9950-2fc0dd1d1408",
                             Email = "test@kea.dk",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
-                            PasswordHash = "AQAAAAIAAYagAAAAELUm4YVx08Cs/6U/E9wWr1BeKpeiQQ4I/Kb7NuY7UfqXvOwYWsMo367/+VL8ONc7hA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAiZ7aobXjrtiipwyF0UXlF5T2R/jh9dYzyesKAYGkHAafbhALfQfC2avBPRmXLP3w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "68f26e9c-0d8c-492c-97a9-ad0e5dee8d8c",
+                            SecurityStamp = "8112a3a7-01d4-4a2f-95d4-c47864fa8340",
                             TwoFactorEnabled = false,
                             UserName = "test@kea.dk"
                         });

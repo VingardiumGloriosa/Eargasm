@@ -42,6 +42,10 @@
               "target": "Package",
               "version": "[7.0.0, )"
             },
+            "Keras.NET": {
+              "target": "Package",
+              "version": "[3.8.5, )"
+            },
             "Microsoft.AspNetCore.Authentication.Google": {
               "target": "Package",
               "version": "[7.0.1, )"

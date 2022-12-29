@@ -21,6 +21,10 @@ a[b-oyl0xoknfi] {
   color: #0077cc;
 }
 
+.pb-3[b-oyl0xoknfi]{
+  overflow: none  ;
+padding:-10%}
+
 .btn-primary[b-oyl0xoknfi] {
   color: #fff;
   background-color: #1b6ec2;
@@ -50,8 +54,12 @@ button.accept-policy[b-oyl0xoknfi] {
 }
 
 .footer[b-oyl0xoknfi] {
-  position: absolute;
-  bottom: 0;
+  margin-top: 5%;
+  background-color: lightgray;
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
   width: 100%;
   justify-items: center;
   white-space: nowrap;
@@ -61,8 +69,5 @@ button.accept-policy[b-oyl0xoknfi] {
     flex-direction: row-reverse;
     align-content: center;
     align-items: center;
-}
-
-.container.footer[b-oyl0xoknfi]{
-  
+    padding: 10px;
 }

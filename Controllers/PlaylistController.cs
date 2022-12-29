@@ -97,6 +97,10 @@ namespace Eargasm.Controllers
                 CreateNoWindow = true
             };
             Process.Start(processStartInfo);
+
+            StreamReader reader = process.StandardOutput;
+            string output = reader.ReadToEnd();
+
             // go ahead and save it into the database
             // redirectToAction()
             IdentityUser user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);

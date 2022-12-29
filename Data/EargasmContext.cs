@@ -54,10 +54,9 @@ namespace Eargasm.Data
         private void SeedPlaylists(ModelBuilder builder)
         {
             builder.Entity<Playlist>().HasData(
-            new Playlist() { Id = 687654, Created = DateTime.Now, Url = "This is playlist 1", Title = "plalylist no 1", UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4" },
-            new Playlist() { Id = 2, Created = DateTime.Now, Url = "This is playlist 2", Title = "plalylist no 2", UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4" }
-
-        );
+                new Playlist() { Id = 1, Created = DateTime.Now, Url = "https://open.spotify.com/playlist/1t7Mlal8U3EkGA1KjVtWPg?si=0350ceb077104333x", Title = "Feeling Cozy", UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4", imageUrl = "https://i.scdn.co/image/ab67706c0000bebb9e0a4f504a0c39f5452371df" },
+            new Playlist() { Id = 3, Created = DateTime.Now, Url = "https://open.spotify.com/playlist/0az16dieCF3dhJZmsCCUSb?si=bc1d022017e54189", Title = "Heavy Leg Day", UserId = "9bd1471a-b7db-4578-92f9-81fa4346f6d4", imageUrl = "https://mosaic.scdn.co/640/ab67616d0000b273b96b08f972a3f1e925a69fedab67616d0000b273bbdafec608fc5329ec2ad831ab67616d0000b273cd8176d1d53fb8c345375866ab67616d0000b273d2de49f423eb924c79a155d2" }
+    );
         }
     }
 }

@@ -87,7 +87,7 @@ namespace Eargasm.Controllers
             string path = new Uri(playlist.Url).AbsolutePath;
 
             //method to run getcsv script and pass it the path (playlist uid) parameter
-
+            /*
             var processStartInfo = new ProcessStartInfo
             {
                 Arguments = string.Format("{0} {1}", "Controllers/getcsv.py", path),
@@ -110,7 +110,19 @@ namespace Eargasm.Controllers
                 CreateNoWindow = true
             };
             Process.Start(processStartInfo2);
+*/
 
+            var processStartInfo = new ProcessStartInfo
+            {
+                Arguments = string.Format("{0} {1} {2}", "Controllers/semifinalscript.py", path, '"' + playlist.Title + '"'),
+                FileName = "python.exe",
+                //FileName = Environment.GetEnvironmentVariable("WINDIR") + (@"\explorer.exe", "C:/Python310"),
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true
+            };
+            Process.Start(processStartInfo);
+            String imgUrl;
 
             // go ahead and save it into the database
             // redirectToAction()
@@ -120,7 +132,6 @@ namespace Eargasm.Controllers
             using (var reader = new StreamReader("C:/Users/Glória/Code/GitHub/Sem 4/CryingMaterial/Eargasm/imgUrl.csv"))
             {
                 imgUrl = reader.ReadLine();
-                Console.Write("pomoc" + imgUrl);
                 reader.Close();
 
             }

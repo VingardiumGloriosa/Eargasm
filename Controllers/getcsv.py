@@ -39,7 +39,7 @@ else:
     raise ValueError("Expected format: https://open.spotify.com/playlist/...")
 """
 # manually cuz this shit dont work
-playlist_uri = sys.argv[1]
+playlist_uri = "4GbjnojkYU2j02gsr6myzY?si=5c3eba71d3f3446d"
 
 # get list of tracks in a given playlist (note: max playlist length 100)
 tracks = session.playlist_tracks(playlist_uri)["items"]

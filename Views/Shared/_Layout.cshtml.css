@@ -10,12 +10,14 @@ a.navbar-brand {
 .centerContent{
   text-align: center;
   position: absolute;
-  top: 25%;
+  top: 20%;
   left: 20%;
-  width: 60%;
+  width: 60%; 
   height: 70%;
   margin: -50px 0 0 -50px;
+  padding-bottom: 80%;
 }
+
 
 a {
   color: #0077cc;

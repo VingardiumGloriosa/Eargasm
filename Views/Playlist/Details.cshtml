@@ -10,22 +10,20 @@
     <h4>Playlist</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+        <a href='@Html.DisplayFor(model => model.Url)'>
+            <img src="@Html.DisplayFor(model => model.imageUrl)" data-holder-rendered="true"
+                style="height: 260px; width: 260px; display: block;">
+        </a>
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Title)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Title)
         </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Url)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Url)
-        </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Created)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Created)
         </dd>
     </dl>

@@ -9,6 +9,7 @@
       "Eargasm/1.0.0": {
         "dependencies": {
           "AspNet.Security.OAuth.Spotify": "7.0.0",
+          "Keras.NET": "3.8.5",
           "Microsoft.AspNetCore.Authentication.Google": "7.0.1",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.0",
           "Microsoft.AspNetCore.Identity.UI": "7.0.0",
@@ -69,6 +70,17 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
+          }
+        }
+      },
+      "Keras.NET/3.8.5": {
+        "dependencies": {
+          "Numpy.Bare": "3.8.1.25"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Keras.dll": {
+            "assemblyVersion": "3.8.5.0",
+            "fileVersion": "3.8.5.0"
           }
         }
       },
@@ -1579,6 +1591,26 @@
           }
         }
       },
+      "Numpy.Bare/3.8.1.25": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "pythonnet_netstandard_py38_win": "2.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Numpy.Bare.dll": {
+            "assemblyVersion": "3.7.1.4",
+            "fileVersion": "3.7.1.4"
+          }
+        }
+      },
+      "pythonnet_netstandard_py38_win/2.5.1": {
+        "runtime": {
+          "lib/netstandard2.0/Python.Runtime.dll": {
+            "assemblyVersion": "2.5.1.0",
+            "fileVersion": "2.5.1.0"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -2621,6 +2653,13 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
+    "Keras.NET/3.8.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NFUV194GVq87ZBrUNMrFXy/pMPchh0clyShr4HHoKY+NYaCOIr9kvcRS1hE0rs8S9Adbvt2+gIG9HfNCWikIAg==",
+      "path": "keras.net/3.8.5",
+      "hashPath": "keras.net.3.8.5.nupkg.sha512"
+    },
     "MessagePack/2.1.152": {
       "type": "package",
       "serviceable": true,
@@ -3257,6 +3296,20 @@
       "sha512": "sha512-T/igBDLXCd+pH3YTWgGVNvYSOwbwaT30NyyM9ONjvlHlmaUjKBJpr9kH0AeL+Ado4EJsBhU3qxXVc6lyrpRcMw==",
       "path": "nuget.versioning/6.3.1",
       "hashPath": "nuget.versioning.6.3.1.nupkg.sha512"
+    },
+    "Numpy.Bare/3.8.1.25": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YqbpafFbck+JI0/guhaiJqAqTOKJXGbCfre6PZH+eeQbg27rllyTNPCdw36oLSNzagBIzJjmsGDE61lfSvairg==",
+      "path": "numpy.bare/3.8.1.25",
+      "hashPath": "numpy.bare.3.8.1.25.nupkg.sha512"
+    },
+    "pythonnet_netstandard_py38_win/2.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y8D5KG5Z5pFUzxBINwaN6LuM50LpkRV3TD8Lrn9jz1spbT1mBSCeYAzyA8MSo9+Jb3R/evXq0m3+d1KiDGGYUg==",
+      "path": "pythonnet_netstandard_py38_win/2.5.1",
+      "hashPath": "pythonnet_netstandard_py38_win.2.5.1.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",

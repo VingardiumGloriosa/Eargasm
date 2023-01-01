@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authorization;
 using System.Diagnostics;
 using System.Collections.Specialized;
 using System.Web;
+using System.Threading;
 
 namespace Eargasm.Controllers
 {
@@ -21,7 +22,7 @@ namespace Eargasm.Controllers
     {
         private readonly EargasmContext _context;
         private readonly UserManager<IdentityUser> _userManager;
-
+        private object line;
 
         public PlaylistController(EargasmContext context, UserManager<IdentityUser> userManager)
         {
@@ -82,11 +83,11 @@ namespace Eargasm.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Title,Url")] Playlist playlist)
         {
-            //Testing
-            //Console.Write("Work yye cunt");
+
             string path = new Uri(playlist.Url).AbsolutePath;
-            //Testing
-            //Console.Write(path.ToString()); 
+
+            //method to run getcsv script and pass it the path (playlist uid) parameter
+
             var processStartInfo = new ProcessStartInfo
             {
                 Arguments = string.Format("{0} {1}", "Controllers/getcsv.py", path),
@@ -97,17 +98,37 @@ namespace Eargasm.Controllers
                 CreateNoWindow = true
             };
             Process.Start(processStartInfo);
+            String imgUrl;
 
-            StreamReader reader = process.StandardOutput;
-            string output = reader.ReadToEnd();
+            var processStartInfo2 = new ProcessStartInfo
+            {
+                Arguments = string.Format("{0} {1}", "Controllers/createplaylist.py", path),
+                FileName = "python.exe",
+                //FileName = Environment.GetEnvironmentVariable("WINDIR") + (@"\explorer.exe", "C:/Python310"),
+                UseShellExecute = false,
+                RedirectStandardOutput = true,
+                CreateNoWindow = true
+            };
+            Process.Start(processStartInfo2);
+
 
             // go ahead and save it into the database
             // redirectToAction()
             IdentityUser user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
             playlist.UserId = user.Id;
             playlist.Created = DateTime.Now;
+            using (var reader = new StreamReader("C:/Users/Glória/Code/GitHub/Sem 4/CryingMaterial/Eargasm/imgUrl.csv"))
+            {
+                imgUrl = reader.ReadLine();
+                Console.Write("pomoc" + imgUrl);
+                reader.Close();
+
+            }
+            playlist.imageUrl = imgUrl;
+
             _context.Playlist.Add(playlist);
             _context.SaveChanges();
+
             return RedirectToAction("Index");
 
             return View(playlist);
@@ -136,7 +157,7 @@ namespace Eargasm.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Url")] Playlist playlist)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Url,ImageUrl")] Playlist playlist)
         {
             if (id != playlist.Id)
             {
@@ -144,6 +165,9 @@ namespace Eargasm.Controllers
             }
             try
             {
+                Console.Write("help" + playlist.imageUrl);
+                IdentityUser user = await _userManager.FindByNameAsync(HttpContext.User.Identity.Name);
+                playlist.UserId = user.Id;
                 _context.Update(playlist);
                 await _context.SaveChangesAsync();
             }

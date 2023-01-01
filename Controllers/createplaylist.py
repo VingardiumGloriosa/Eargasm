@@ -46,14 +46,12 @@ token = spotipy.util.prompt_for_user_token(
     scope='playlist-modify-public playlist-modify-private',
     client_id=CLIENT_ID,
     client_secret=CLIENT_SECRET,
-    redirect_uri="http://localhost:5119/callback"
+    redirect_uri="http://localhost:5123/callback"
 )
 sp = spotipy.Spotify(auth=token)
 
 #user_playlist_create(user, name, public=True, collaborative=False, description='')
-print("test1")
 sp.user_playlist_create(username, sortedPlaylistName)
-print("test2")
 playlists = sp.user_playlists(username)["items"]
 
 for playlist in playlists:

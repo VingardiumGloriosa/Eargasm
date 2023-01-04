@@ -114,7 +114,7 @@ namespace Eargasm.Controllers
 
             var processStartInfo = new ProcessStartInfo
             {
-                Arguments = string.Format("{0} {1} {2}", "Controllers/semifinalscript.py", path, '"' + playlist.Title + '"'),
+                Arguments = string.Format("{0} {1} {2}", "Controllers/finalscript.py", path, '"' + playlist.Title + '"'),
                 FileName = "python.exe",
                 //FileName = Environment.GetEnvironmentVariable("WINDIR") + (@"\explorer.exe", "C:/Python310"),
                 UseShellExecute = false,
